@@ -1,5 +1,5 @@
 {
-	"npmScope": "nativescript",
+	"npmScope": "test",
 	"affected": {
 		"defaultBase": "master"
 	},
@@ -21,6 +21,9 @@
 			"tags": []
 		},
 		"all": {
+			"tags": []
+		},
+		"agora": {
 			"tags": []
 		}
 	},

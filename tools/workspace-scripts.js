@@ -57,12 +57,19 @@ module.exports = {
 			},
 		},
 		'⚙️': {
-			script: `npx cowsay "@nativescript/* packages will keep your ⚙️ cranking"`,
-			description: '_____________  @nativescript/*  _____________',
+			script: `npx cowsay "@test/* packages will keep your ⚙️ cranking"`,
+			description: '_____________  @test/*  _____________',
 		},
 		// packages
 		// build output is always in dist/packages
-		'@nativescript': {
+		'@test': {
+			// @test/agora
+			agora: {
+				build: {
+					script: 'nx run agora:build.all',
+					description: '@test/agora: Build',
+				},
+			},
 			'build-all': {
 				script: 'nx run all:build',
 				description: 'Build all packages',
@@ -73,10 +80,14 @@ module.exports = {
 			description: '_____________  Focus (VS Code supported)  _____________',
 		},
 		focus: {
+			agora: {
+				script: 'nx run agora:focus',
+				description: 'Focus on @test/agora',
+			},
 			reset: {
 				script: 'nx run all:focus',
 				description: 'Reset Focus',
-			}
+			},
 		},
 		'.....................': {
 			script: `npx cowsay "That's all for now folks ~"`,

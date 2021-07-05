@@ -86,6 +86,47 @@
 					}
 				}
 			}
+		},
+		"agora": {
+			"projectType": "library",
+			"schematics": {},
+			"root": "packages/agora",
+			"sourceRoot": "packages/agora",
+			"architect": {
+				"build": {
+					"builder": "@nrwl/node:package",
+					"options": {
+						"outputPath": "dist/packages/agora",
+						"tsConfig": "packages/agora/tsconfig.json",
+						"packageJson": "packages/agora/package.json",
+						"main": "packages/agora/index.ts",
+						"assets": [
+							"packages/agora/*.md",
+							"packages/agora/index.d.ts",
+							"LICENSE",
+							{
+								"glob": "**/*",
+								"input": "packages/agora/platforms/",
+								"output": "./platforms/"
+							}
+						]
+					}
+				},
+				"build.all": {
+					"builder": "@nrwl/workspace:run-commands",
+					"options": {
+						"commands": ["nx run agora:build", "node tools/scripts/build-finish.ts agora"],
+						"parallel": false
+					}
+				},
+				"focus": {
+					"builder": "@nrwl/workspace:run-commands",
+					"options": {
+						"commands": ["nx g @nativescript/plugin-tools:focus-packages agora"],
+						"parallel": false
+					}
+				}
+			}
 		}
 	},
 	"cli": {

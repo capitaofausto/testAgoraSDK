@@ -54,5 +54,7 @@
 		<key>NSAllowsArbitraryLoadsInWebContent</key>
 		<true/>
 	</dict>
+  <key>NSMicrophoneUsageDescription</key>
+	<string>Fave needs to use your Microphone for sound recording on media content creation.</string>
 </dict>
 </plist>

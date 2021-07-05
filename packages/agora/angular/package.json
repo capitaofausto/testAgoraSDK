@@ -1,0 +1,16 @@
+{
+	"name": "test-agora-angular",
+	"ngPackage": {
+		"lib": {
+			"entryFile": "index.ts",
+			"umdModuleIds": {
+				"@nativescript/core": "ns-core",
+				"@nativescript/angular": "ns-angular",
+				"@test/agora": "ns-agora"
+			}
+		},
+		"whitelistedNonPeerDependencies": [
+			"."
+		]
+	}
+}
